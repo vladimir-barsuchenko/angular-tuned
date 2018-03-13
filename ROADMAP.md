@@ -18,4 +18,5 @@
 17. Dynamic components (Plus factory)
 18. Docker. Jenkins
 19. Take care of polyfills
-20. 
+20. HRM
+21. Angular CDK
