@@ -1,3 +1,4 @@
+0. AirBnb tslint
 1. Lazy Load everything 
 2. AOT
 3. SSR (SEO)
