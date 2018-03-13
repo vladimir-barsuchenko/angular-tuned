@@ -1,48 +1,42 @@
 {
-  "rulesDirectory": [
-    "node_modules/codelyzer"
+  "extends": [
+    "tslint-config-airbnb"
   ],
   "rules": {
     "arrow-return-shorthand": true,
     "callable-types": true,
     "class-name": true,
-    "comment-format": [
+    "function-name": [
       true,
-      "check-space"
+      {
+        "function-regex": "^[a-zA-Z][\\w\\d]+$"
+      }
     ],
-    "curly": true,
-    "deprecation": {
-      "severity": "warn"
-    },
-    "eofline": true,
-    "forin": true,
-    "import-blacklist": [
+    "variable-name": [
       true,
-      "rxjs",
-      "rxjs/Rx"
+      {
+        "variable-regex": "^[a-zA-Z][\\w\\d]+$"
+      }
+    ],
+    "whitespace": [
+      true,
+      "check-branch",
+      "check-decl",
+      "check-operator",
+      "check-separator",
+      "check-type",
+      "check-preblock"
     ],
     "import-spacing": true,
-    "indent": [
-      true,
-      "spaces"
-    ],
+    "curly": true,
+    "forin": true,
     "interface-over-type-literal": true,
     "label-position": true,
-    "max-line-length": [
-      true,
-      140
-    ],
     "member-access": false,
     "member-ordering": [
       true,
-      {
-        "order": [
-          "static-field",
-          "instance-field",
-          "static-method",
-          "instance-method"
-        ]
-      }
+      "static-before-instance",
+      "variables-before-functions"
     ],
     "no-arg": true,
     "no-bitwise": true,
@@ -54,7 +48,6 @@
       "timeEnd",
       "trace"
     ],
-    "no-construct": true,
     "no-debugger": true,
     "no-duplicate-super": true,
     "no-empty": false,
@@ -83,20 +76,6 @@
       "check-else",
       "check-whitespace"
     ],
-    "prefer-const": true,
-    "quotemark": [
-      true,
-      "single"
-    ],
-    "radix": true,
-    "semicolon": [
-      true,
-      "always"
-    ],
-    "triple-equals": [
-      true,
-      "allow-null-check"
-    ],
     "typedef-whitespace": [
       true,
       {
@@ -107,37 +86,7 @@
         "variable-declaration": "nospace"
       }
     ],
-    "unified-signatures": true,
-    "variable-name": false,
-    "whitespace": [
-      true,
-      "check-branch",
-      "check-decl",
-      "check-operator",
-      "check-separator",
-      "check-type"
-    ],
-    "directive-selector": [
-      true,
-      "attribute",
-      "app",
-      "camelCase"
-    ],
-    "component-selector": [
-      true,
-      "element",
-      "app",
-      "kebab-case"
-    ],
-    "no-output-on-prefix": true,
-    "use-input-property-decorator": true,
-    "use-output-property-decorator": true,
-    "use-host-property-decorator": true,
-    "no-input-rename": true,
-    "no-output-rename": true,
-    "use-life-cycle-interface": true,
-    "use-pipe-transform-interface": true,
-    "component-class-suffix": true,
-    "directive-class-suffix": true
+    "typeof-compare": true,
+    "unified-signatures": true
   }
 }
