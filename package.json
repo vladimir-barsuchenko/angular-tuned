@@ -9,7 +9,11 @@
     "build": "ng build --prod",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "build:ssr": "npm run build:client-and-server-bundles && npm run webpack:server",
+    "serve:ssr": "node dist/server.js",
+    "build:client-and-server-bundles": "ng build --prod && ng build --prod --app 1 --output-hashing=false",
+    "webpack:server": "webpack --config webpack.server.config.js --progress --colors"
   },
   "private": true,
   "dependencies": {
@@ -21,7 +25,11 @@
     "@angular/http": "^5.2.0",
     "@angular/platform-browser": "^5.2.0",
     "@angular/platform-browser-dynamic": "^5.2.0",
+    "@angular/platform-server": "^5.2.8",
     "@angular/router": "^5.2.0",
+    "@nguniversal/common": "^5.0.0-beta.6",
+    "@nguniversal/express-engine": "^5.0.0-beta.6",
+    "@nguniversal/module-map-ngfactory-loader": "^5.0.0-beta.6",
     "core-js": "^2.4.1",
     "rxjs": "^5.5.6",
     "zone.js": "^0.8.19"
@@ -33,8 +41,8 @@
     "@angularclass/hmr": "^2.1.3",
     "@types/jasmine": "~2.8.3",
     "@types/jasminewd2": "~2.0.2",
-    "@types/node": "~6.0.60",
-    "codelyzer": "^4.0.1",
+    "@types/node": "^8.0.30",
+    "codelyzer": "^4.2.1",
     "jasmine-core": "~2.8.0",
     "jasmine-spec-reporter": "~4.2.1",
     "karma": "~2.0.0",
@@ -46,6 +54,12 @@
     "ts-node": "~4.1.0",
     "tslint": "~5.9.1",
     "tslint-config-airbnb": "^5.7.0",
-    "typescript": "~2.5.3"
+    "typescript": "~2.5.3",
+    "ts-loader": "^2.3.7",
+    "express": "^4.16.3",
+    "http-server": "^0.11.1",
+    "pre-commit": "^1.2.2",
+    "reflect-metadata": "^0.1.12",
+    "cpy-cli": "^1.0.1"
   }
 }
