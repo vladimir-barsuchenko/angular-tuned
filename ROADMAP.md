@@ -2,6 +2,7 @@
 1. Lazy Load everything 
 2. AOT
 3. SSR (SEO)
+   - Pre-render routes
 4. PRPL 
    - PWA (Service Worker)
 5. Webworker
@@ -21,3 +22,4 @@
 19. Take care of polyfills
 20. HRM
 21. Angular CDK
+22. Add library such as perfume.js or similar to measure load metrics
