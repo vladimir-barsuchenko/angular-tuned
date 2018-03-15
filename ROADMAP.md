@@ -1,7 +1,7 @@
-0. AirBnb tslint
-1. Lazy Load everything 
+~~0. AirBnb tslint~~
+1. Router. Lazy Load everything 
 2. AOT
-3. SSR (SEO)
+~~3. SSR (SEO)~~
    - Pre-render routes
 4. PRPL 
    - PWA (Service Worker)
@@ -16,10 +16,11 @@
 13. Tests coverage
 14. Progressive image loading
 15. Defer rendering on mounting / unmounting components
-16. Redux store (NgRx)
+16. Redux store (NgRx). Try to tune .subscriptions when OnPush strategy is used
 17. Dynamic components (Plus factory)
 18. Docker. Jenkins
 19. Take care of polyfills
-20. HRM
+~~20. HRM~~
 21. Angular CDK
 22. Add library such as perfume.js or similar to measure load metrics
+23. zone.js (NgZone)
