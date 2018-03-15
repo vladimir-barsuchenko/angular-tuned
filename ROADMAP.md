@@ -1,26 +1,26 @@
-~~0. AirBnb tslint~~
-1. Router. Lazy Load everything 
-2. AOT
-~~3. SSR (SEO)~~
+0. ~~AirBnb tslint~~
+1. ~~HRM~~
+2. ~~SSR (SEO)~~
+3. ~~AOT~~ (Goes by default in Angular 5)
+4. Router. Lazy Load everything 
    - Pre-render routes
-4. PRPL 
+5. PRPL 
    - PWA (Service Worker)
-5. Webworker
-6. <link> optimizations
-7. requestIdleCallback()
-8. Bundle size
-9. double request animation trick
-10. Angular material (configurable styles)
-11. Angular animations
-12. Port to mobile / desktop
-13. Tests coverage
-14. Progressive image loading
-15. Defer rendering on mounting / unmounting components
-16. Redux store (NgRx). Try to tune .subscriptions when OnPush strategy is used
-17. Dynamic components (Plus factory)
-18. Docker. Jenkins
-19. Take care of polyfills
-~~20. HRM~~
+6. Webworker
+7. <link> optimizations
+8. requestIdleCallback()
+9. Bundle size
+10. double request animation trick
+11. Angular material (configurable styles)
+12. Angular animations
+13. Port to mobile / desktop
+14. Tests coverage
+15. Progressive image loading
+16. Defer rendering on mounting / unmounting components
+17. Redux store (NgRx). Try to tune .subscriptions when OnPush strategy is used
+18. Dynamic components (Plus factory)
+19. Docker. Jenkins
+20. Take care of polyfills
 21. Angular CDK
 22. Add library such as perfume.js or similar to measure load metrics
 23. zone.js (NgZone)
