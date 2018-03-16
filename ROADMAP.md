@@ -16,7 +16,7 @@
 13. Port to mobile / desktop
 14. Tests coverage
 15. Progressive image loading
-16. Defer rendering on mounting / unmounting components
+16. Defer rendering on mounting / un-mounting components
 17. Redux store (NgRx). Try to tune .subscriptions when OnPush strategy is used
 18. Dynamic components (Plus factory)
 19. Docker. Jenkins
