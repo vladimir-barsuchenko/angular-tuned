@@ -3,7 +3,7 @@
 2. ~~SSR (SEO)~~
 3. ~~AOT~~ (Goes by default in Angular 5)
 4. ~~Router. Lazy Load everything~~
-   ~~- Pre-render routes~~
+   - ~~Pre-render routes~~
 5. PRPL 
    - PWA (Service Worker)
 6. Webworker
