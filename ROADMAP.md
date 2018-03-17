@@ -8,6 +8,8 @@
    - Service Worker
    - HTTP/2 server push (Firebase)
    - app shell
+   - Push notifications
+   - Dynamically cache content
 6. Webworker
 7. <link> optimizations
 8. requestIdleCallback()
