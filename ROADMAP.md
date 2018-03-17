@@ -4,8 +4,10 @@
 3. ~~AOT~~ (Goes by default in Angular 5)
 4. ~~Router. Lazy Load everything~~
    - ~~Pre-render routes~~
-5. PRPL 
-   - PWA (Service Worker)
+5. PRPL (PWA)
+   - Service Worker
+   - HTTP/2 server push (Firebase)
+   - app shell
 6. Webworker
 7. <link> optimizations
 8. requestIdleCallback()
