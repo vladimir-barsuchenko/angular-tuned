@@ -24,3 +24,4 @@
 21. Angular CDK
 22. Add library such as perfume.js or similar to measure load metrics
 23. zone.js (NgZone)
+24. Firebase. Angular Fire
