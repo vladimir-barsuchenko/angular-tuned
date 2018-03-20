@@ -5,7 +5,7 @@
 4. ~~Router. Lazy Load everything~~
    - ~~Pre-render routes~~
 5. PRPL (PWA)
-   - Service Worker
+   - ~~Service Worker~~
    - HTTP/2 server push (Firebase)
    - app shell
    - Push notifications
