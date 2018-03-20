@@ -3,6 +3,8 @@ import 'reflect-metadata';
 import { enableProdMode } from '@angular/core';
 
 import * as express from 'express';
+import * as compression from 'compression';
+import * as spdy from 'spdy';
 import { join } from 'path';
 import { readFileSync } from 'fs';
 
@@ -25,6 +27,8 @@ const { AppServerModuleNgFactory, LAZY_MODULE_MAP } = require('./dist/server/mai
 import { ngExpressEngine } from '@nguniversal/express-engine';
 // Import module map for lazy loading
 import { provideModuleMap } from '@nguniversal/module-map-ngfactory-loader';
+
+app.use(compression({ threshold: 0 }));
 
 // Our Universal express-engine
 app.engine('html', ngExpressEngine({
@@ -51,7 +55,13 @@ app.get('*', (req, res) => {
   res.render('index', { req });
 });
 
-// Start up the Node server
+// const options = {
+//   key: readFileSync(join(process.cwd(), 'server.key')),
+//   cert: readFileSync(join(process.cwd(), 'server.crt')),
+// };
+//
+// spdy
+//   .createServer(options, app)
 app.listen(PORT, () => {
   console.log(`Node Express server listening on http://localhost:${PORT}`);
 });
