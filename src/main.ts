@@ -5,6 +5,19 @@ import { AppModule } from './app/app.module';
 import { environment } from './environments/environment';
 import { hmrBootstrap } from './hmr';
 
+
+function disableConsoleApi() {
+  if (typeof console['_commandLineAPI'] !== 'undefined') {
+    console['API'] = console['_commandLineAPI'];
+  } else if (typeof console['_inspectorCommandLineAPI'] !== 'undefined') {
+    console['API'] = console['_inspectorCommandLineAPI'];
+  } else if (typeof console.clear !== 'undefined') {
+    console['API'] = console;
+  }
+
+  console['API'].clear();
+}
+
 if (environment.production) {
   enableProdMode();
 }
@@ -19,10 +32,5 @@ if (environment.hmr) {
     console.log('Are you using the --hmr flag for ng serve?');
   }
 } else {
-  bootstrap()
-    .then(() => {
-      if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('/worker-basic.min.js');
-      }
-    });
+  bootstrap();
 }

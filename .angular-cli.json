@@ -28,7 +28,8 @@
         "dev": "environments/environment.ts",
         "prod": "environments/environment.prod.ts",
         "hmr": "environments/environment.hmr.ts"
-      }
+      },
+      "serviceWorker": true
     },
     {
       "platform": "server",
