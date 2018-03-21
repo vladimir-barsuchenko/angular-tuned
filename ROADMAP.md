@@ -29,3 +29,5 @@
 22. Add library such as perfume.js or similar to measure load metrics
 23. zone.js (NgZone)
 24. Firebase. Angular Fire
+25. Google Analytics
+26. AMP - Accelerated Mobile Pages 
