@@ -6,10 +6,10 @@
    - ~~Pre-render routes~~
 5. PRPL (PWA)
    - ~~Service Worker~~
-   - HTTP/2 server push (Firebase)
-   - app shell
+   - ~~HTTP/2 server push (Firebase)~~
+   - ~~app shell~~
    - ~~Push notifications~~
-   - Dynamically cache content
+   - ~~Dynamically cache content~~
 6. Webworker
 7. <link> optimizations
 8. requestIdleCallback()
