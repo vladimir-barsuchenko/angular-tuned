@@ -17,6 +17,17 @@ import { ServiceWorkerModule } from '@angular/service-worker';
     AppRoutingModule,
   ],
   providers: [],
-  bootstrap: [AppComponent],
+  bootstrap: [AppComponent, ServiceWorker],
 })
-export class AppModule {}
+export class AppModule {
+  constructor(swPushManager: PushManager) {
+    swPushManager
+      .subscribe({
+        applicationServerKey:
+          'BAtbtTlInO98duzJcw5Fo0rC20J8QPxuWqBxc4A6dOm_2NyXsBRlLbQmjfg9megpojM6Anl6Rl_CaYewtdSJA6Q',
+      })
+      .then((res) => {
+        console.log(res);
+      });
+  }
+}
