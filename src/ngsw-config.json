@@ -37,8 +37,5 @@
         "maxSize": 20
       }
     }
-  ],
-  "push": {
-    "showNotifications": true
-  }
+  ]
 }
