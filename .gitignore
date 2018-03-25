@@ -9,6 +9,10 @@
 # dependencies
 /node_modules
 
+/functions/dist-server
+/functions/node_modules
+/functions/browser
+
 # IDEs and editors
 /.idea
 .project
