@@ -29,9 +29,14 @@
         "prod": "environments/environment.prod.ts",
         "hmr": "environments/environment.hmr.ts"
       },
-      "serviceWorker": true
+      "serviceWorker": true,
+      "appShell": {
+        "app": "universal",
+        "route": "app-shell-path"
+      }
     },
     {
+      "name": "universal",
       "platform": "server",
       "root": "src",
       "outDir": "dist/server",
