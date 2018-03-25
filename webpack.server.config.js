@@ -19,6 +19,7 @@ module.exports = {
     path: path.join(__dirname, 'dist'),
     filename: '[name].js',
   },
+
   module: {
     rules: [
       { test: /\.ts$/, loader: 'ts-loader' },
