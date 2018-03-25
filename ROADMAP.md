@@ -31,3 +31,4 @@
 24. Firebase. Angular Fire
 25. Google Analytics
 26. AMP - Accelerated Mobile Pages 
+27. CI. Travis CI
