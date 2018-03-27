@@ -13,23 +13,44 @@
    - ~~Push notifications~~
    - ~~Dynamically cache content~~
 6. ~~AMP - Accelerated Mobile Pages~~
-7. Webworker
-. <link> optimizations
-. requestIdleCallback()
-. Bundle size
-. double request animation trick
-. Angular material (configurable styles)
-. Angular animations
-. Port to mobile / desktop
-. Tests coverage
-. Progressive image loading
-. Defer rendering on mounting / un-mounting components
-. Redux store (NgRx). Try to tune .subscriptions when OnPush strategy is used
-. Dynamic components (Plus factory)
-. Docker. Jenkins
-. Take care of polyfills
-. Angular CDK
-. Add library such as perfume.js or similar to measure load metrics
-. zone.js (NgZone)
-. Firebase. Angular Fire
-. Google Analytics
+- CDN. KeyCDN
+- Angular CDK
+  - A11y
+  - Bidirectionality
+  - Layout
+  - Observers
+  - Overlay
+  - Portal
+  - Scrolling
+- i18n
+- Redux store (NgRx) (example app: https://github.com/ngrx/platform/tree/master/example-app)
+  - Try to tune subscriptions when OnPush strategy is used
+  - store
+  - effects
+  - router-store
+  - store-devtools
+  - entity, schematics, notify, db
+- Dynamic components (CDK portals)
+- Angular animations
+- Port to mobile / desktop
+- Angular material (configurable styles)
+- Webworker
+- Angular Elements
+- RxJS 6
+- <link> optimizations
+  - dns-prefetch
+  - preconnet
+  - preload
+- requestIdleCallback()
+- Bundle size
+- double request animation trick
+- Tests coverage
+- Progressive image loading
+- Defer rendering on mounting / un-mounting components
+- Docker. Jenkins
+- image.onload() Rendering images in separate thread
+- RAIL
+- Take care of polyfills
+- zone.js (NgZone)
+- Firebase. Angular Fire
+- Google Analytics
