@@ -5,6 +5,7 @@ import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { ServiceWorkerConfigModule } from './modules/service-worker-config.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -13,6 +14,7 @@ import { ServiceWorkerConfigModule } from './modules/service-worker-config.modul
     AppRoutingModule,
     RouterModule,
     ServiceWorkerConfigModule,
+    BrowserAnimationsModule,
   ],
   declarations: [
     AppComponent,
