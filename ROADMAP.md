@@ -54,3 +54,5 @@
 - zone.js (NgZone)
 - Firebase. Angular Fire
 - Google Analytics
+- Web Assembly
+- CSS API Houdini
