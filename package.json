@@ -57,6 +57,7 @@
     "cpy-cli": "^1.0.1",
     "express": "^4.16.3",
     "http-server": "^0.11.1",
+    "husky": "^0.14.3",
     "jasmine-core": "~2.8.0",
     "jasmine-spec-reporter": "~4.2.1",
     "karma": "~2.0.0",
@@ -64,6 +65,7 @@
     "karma-coverage-istanbul-reporter": "^1.2.1",
     "karma-jasmine": "~1.1.0",
     "karma-jasmine-html-reporter": "^0.2.2",
+    "lint-staged": "^7.0.2",
     "pre-commit": "^1.2.2",
     "prettier": "1.11.1",
     "protractor": "~5.1.2",
@@ -76,5 +78,14 @@
     "tslint": "~5.9.1",
     "tslint-config-airbnb": "^5.7.0",
     "typescript": "~2.5.3"
-  }
+  },
+	"lint-staged": {
+		"*.ts": ["ng lint", "git add"],
+		"*.scss": "stylelint"
+	},
+	"husky": {
+		"hooks": {
+			"pre-commit": "lint-staged"
+		}
+	}
 }

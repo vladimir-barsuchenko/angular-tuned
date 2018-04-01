@@ -14,7 +14,7 @@
    - ~~Dynamically cache content~~
 6. ~~AMP - Accelerated Mobile Pages~~
 - ~~Style lint. Order~~
-- Editor config
+- ~~Editor config~~
 - Lint-staged. Husky
 - Commit lint
 - Travis CI, Circle CI, GreenKeeper
