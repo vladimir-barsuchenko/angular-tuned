@@ -89,6 +89,7 @@
     "declaration-colon-newline-after": "always-multi-line",
     "declaration-colon-space-after": "always-single-line",
     "declaration-colon-space-before": "never",
+    "declaration-property-value-blacklist": { "/^border/": ["none"] },
     "declaration-empty-line-before": [
       "always",
       {
@@ -124,7 +125,7 @@
     "media-query-list-comma-space-before": "never",
     "no-eol-whitespace": true,
     "no-missing-end-of-source-newline": true,
-    "number-leading-zero": "always",
+    "number-leading-zero": "never",
     "number-no-trailing-zeros": true,
     "property-case": "lower",
     "rule-empty-line-before": [
@@ -157,6 +158,11 @@
     "value-list-comma-space-after": "always-single-line",
     "value-list-comma-space-before": "never",
     "value-list-max-empty-lines": 0,
+    "max-nesting-depth": 2,
+    "scss/dollar-variable-pattern": "^_?[a-z]+[\\w-]*$",
+    "scss/at-extend-no-missing-placeholder": true,
+    "string-quotes": "single",
+    "selector-max-id": 0,
     "order/order": [
       "custom-properties",
       "dollar-variables",
@@ -266,6 +272,7 @@
     ]
   },
   "plugins": [
-    "stylelint-order"
+    "stylelint-order",
+    "stylelint-scss",
   ]
 }
