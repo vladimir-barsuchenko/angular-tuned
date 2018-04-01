@@ -15,8 +15,8 @@
 6. ~~AMP - Accelerated Mobile Pages~~
 - ~~Style lint. Order~~
 - ~~Editor config~~
-- Lint-staged. Husky
-- Commit lint
+- ~~Lint-staged. Husky~~
+- ~~Commit lint / Commitizen~~
 - Travis CI, Circle CI, GreenKeeper
 - 
 - CDN. KeyCDN
