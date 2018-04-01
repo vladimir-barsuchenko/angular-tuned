@@ -10,7 +10,7 @@ import {
   SCRIPT,
 } from '@angular/service-worker/src/module';
 import { NgswCommChannel } from '@angular/service-worker/src/low_level';
-import { isPlatformBrowser } from '@angular/common';
+import {isPlatformBrowser } from '@angular/common';
 
 
 @Component({
