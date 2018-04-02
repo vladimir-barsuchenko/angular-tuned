@@ -21,7 +21,8 @@
     "serve:prerender": "cd dist/browser && http-server",
     "serve:ssr": "node dist/server",
     "cz-commit": "git-cz",
-    "commitmsg": "commitlint -e $GIT_PARAMS"
+    "commitmsg": "commitlint -e $GIT_PARAMS",
+		"precommit": "lint-staged"
   },
   "private": true,
   "dependencies": {
