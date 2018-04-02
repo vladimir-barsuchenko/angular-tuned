@@ -7,7 +7,8 @@
     "start": "ng serve",
     "hmr": "ng serve --hmr -e=hmr",
     "build": "ng build --prod",
-    "test": "ng test",
+    "test": "ng test --single-run",
+		"test:watch": "ng test",
     "lint": "./node_modules/.bin/stylelint src/**/*.scss && ng lint",
     "fix": "./node_modules/.bin/stylelint src/**/*.scss --fix && ng lint --fix",
     "e2e": "ng e2e",
@@ -100,7 +101,7 @@
   },
   "config": {
     "commitizen": {
-			"path": "@commitlint/prompt"
+      "path": "./node_modules/cz-conventional-changelog"
     }
   }
 }
