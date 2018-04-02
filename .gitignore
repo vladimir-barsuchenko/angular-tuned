@@ -46,3 +46,8 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+
+/.firebaserc
+/src/app/modules/src
+/functions/lib/
+
