@@ -1,5 +1,4 @@
 language: node_js
-sudo: false
 
 node_js:
   - '8.9.4'
@@ -7,3 +6,11 @@ node_js:
 install:
   - npm install
   - npm install -g @angular/cli
+
+sudo: required
+dist: trusty
+addons:
+    chrome: stable
+before_script:
+    - "sudo chown root /opt/google/chrome/chrome-sandbox"
+    - "sudo chmod 4755 /opt/google/chrome/chrome-sandbox"
