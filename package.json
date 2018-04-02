@@ -22,7 +22,7 @@
     "serve:ssr": "node dist/server",
     "cz-commit": "git-cz",
     "commitmsg": "commitlint -e $GIT_PARAMS",
-		"precommit": "lint-staged"
+		"precommit": "lint-staged && npm test"
   },
   "private": true,
   "dependencies": {
@@ -92,11 +92,6 @@
       "git add"
     ],
     "*.scss": "stylelint"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged && npm test"
-    }
   },
   "config": {
     "commitizen": {
