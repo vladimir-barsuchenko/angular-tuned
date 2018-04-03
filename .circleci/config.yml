@@ -23,9 +23,9 @@ jobs:
           # fallback to using the latest cache if no exact match is found
           - v1-dependencies-
 
-			- run:
-  			- curl -L -o google-chrome.deb https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-  			- sudo apt-get install google-chrome.deb -y
+			- run: curl -L -o google-chrome.deb
+			- run: curl -L -o https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+  		- run: sudo apt-get install google-chrome.deb -y
       - run: npm install
       - run: sudo npm install -g @angular/cli --unsafe-perm
 
