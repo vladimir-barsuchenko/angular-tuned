@@ -1,0 +1,32 @@
+version: 2
+jobs:
+  build:
+    working_directory: ~/angular-tuned
+    docker:
+      - image: circleci/node:6-browsers
+    steps:
+      - checkout
+      - restore_cache:
+          key: dependency-cache-{{ checksum "package-lock.json" }}
+      - run:
+          name: install-dependencies
+          command: npm install && npm install -g @angular/cli
+      - save_cache:
+          key: dependency-cache-{{ checksum "package-lock.json" }}
+          paths:
+            - ./node_modules
+      - run:
+          name: angular-build
+          command: ng build --prod
+      - run:
+          name: angular-test
+          command: ng test --single-run
+      - store_artifacts:
+          path: test-results.xml
+          prefix: tests
+      - run:
+          name: angular-lint
+          command: ng lint
+      - store_artifacts:
+          path: tslint.xml
+          prefix: lint
