@@ -22,7 +22,7 @@
     "serve:ssr": "node dist/server",
     "cz-commit": "git-cz",
     "commitmsg": "commitlint -e $GIT_PARAMS",
-		"precommit": "lint-staged && npm test"
+		"precommit": "lint-staged"
   },
   "private": true,
   "dependencies": {
