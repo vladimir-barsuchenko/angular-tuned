@@ -14,10 +14,6 @@ jobs:
 
     steps:
       - checkout
-      - curl -L -o google-chrome.deb https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-      - sudo dpkg -i google-chrome.deb
-      - sudo sed -i 's|HERE/chrome\"|HERE/chrome\" --disable-setuid-sandbox|g' /opt/google/chrome/google-chrome
-      - rm google-chrome.deb
 
       # Download and cache dependencies
       - restore_cache:
@@ -26,6 +22,7 @@ jobs:
           # fallback to using the latest cache if no exact match is found
           - v1-dependencies-
 
+      - run: sudo apt-get install -y google-chrome
       - run: npm install
       - run: sudo npm install -g @angular/cli --unsafe-perm
 
