@@ -22,7 +22,7 @@ jobs:
           # fallback to using the latest cache if no exact match is found
           - v1-dependencies-
 
-      - run: sudo apt-get install -y google-chrome
+      - run: sudo apt-get install -y google-chrome-stable
       - run: npm install
       - run: sudo npm install -g @angular/cli --unsafe-perm
 
