@@ -6,5 +6,6 @@
 export const environment = {
   production: false,
   hmr: false,
+  debug: true,
   serverPublicKey: '',
 };
