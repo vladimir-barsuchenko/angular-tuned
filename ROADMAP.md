@@ -17,7 +17,7 @@
 - ~~Editor config~~
 - ~~Lint-staged. Husky~~
 - ~~Commit lint / Commitizen~~
-- Travis CI, Circle CI, GreenKeeper
+- ~~Travis CI, Circle CI, GreenKeeper~~
 - 
 - CDN. KeyCDN
 - Angular CDK
