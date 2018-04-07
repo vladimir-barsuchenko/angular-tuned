@@ -4,6 +4,8 @@ import { PortalModule } from '@angular/cdk/portal';
 
 import { CdkComponent } from './cdk.component';
 import { CdkRoutingModule } from './cdk-routing.module';
+import { PortalComponent } from './components/portal/portal.component';
+import { DynamicComponent } from './components/portal/dynamic.component';
 
 
 @NgModule({
@@ -12,6 +14,7 @@ import { CdkRoutingModule } from './cdk-routing.module';
     PortalModule,
     CdkRoutingModule,
   ],
-  declarations: [CdkComponent],
+  declarations: [CdkComponent, PortalComponent, DynamicComponent],
+  entryComponents: [DynamicComponent],
 })
 export class CdkModule {}
