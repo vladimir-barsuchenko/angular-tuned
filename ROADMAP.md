@@ -18,7 +18,7 @@
 - ~~Lint-staged. Husky~~
 - ~~Commit lint / Commitizen~~
 - ~~Travis CI, Circle CI, GreenKeeper~~
-- 
+- Bootstrap  styles
 - CDN. KeyCDN
 - Angular CDK
   - A11y
@@ -26,7 +26,7 @@
   - Layout
   - Observers
   - Overlay
-  - Portal
+  - ~~Portal~~
   - Scrolling
 - i18n
 - Redux store (NgRx) (example app: https://github.com/ngrx/platform/tree/master/example-app)
