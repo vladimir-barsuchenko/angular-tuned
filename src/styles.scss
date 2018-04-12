@@ -1,29 +1,31 @@
-.spinner {
-  width: 40px;
-  height: 40px;
-  margin: 100px auto;
-  border-radius: 100%;
-  background-color: #333;
-  -webkit-animation: sk-scaleout 1s infinite ease-in-out;
-  animation: sk-scaleout 1s infinite ease-in-out;
-}
+@import 'styles/bootstrap';
+@import 'styles/main';
 
-@-webkit-keyframes sk-scaleout {
-  0% { -webkit-transform: scale(0); }
-
-  100% {
-    opacity: 0;
-    transform: scale(1);
-  }
-}
-
-@keyframes sk-scaleout {
-  0% {
-    transform: scale(0);
-  }
-
-  100% {
-    opacity: 0;
-    transform: scale(1);
-  }
-}
+@include bootstrap((
+  z-index: (
+    class-name: 'z-index',
+    limit: 25,
+    step-threshold-map: (
+      1: 5,
+      5: 25
+    )
+  ),
+  border: (
+    class-name: 'b',
+    radius: 4px,
+    thickness: 1px,
+    color: 'grey',
+  ),
+  indents: (
+    config: (
+      p: 'padding',
+      m: 'margin'
+    ),
+    limit: 72,
+    step-threshold-map: (
+      1: 4,
+      2: 16,
+      4: 72
+    )
+  )
+));
