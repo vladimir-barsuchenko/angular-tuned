@@ -13,23 +13,27 @@ $sides: (
   @each $step, $threshold in $step-threshold-map {
     @if ($i >= $prev-threshold and $i < $threshold) {
       $i: $i + $step;
+
+      @return $i;
     }
 
     $prev-threshold: $threshold;
   }
 
-  @return $i;
+  // should include max $threshold value but not dive into infinite loop. Thus +1 is used
+  @return if($i < $prev-threshold, $prev-threshold, $prev-threshold + 1) ;
 }
 
 // Creates classes with .z-index-1 format
 // We increment step by 1 until threshold is reached that we increment by $step
 // Loop ends when $limit is reached
-@mixin z-index($class-name, $config) {
+@mixin z-index($config) {
   $i: 0;
-  $limit: map_get($config, limit);
+  $class-name: map_get($config, class-name);
   $step-threshold-map: map_get($config, step-threshold-map);
+  $limit: map_get($config, limit);
 
-  @while ($i < $limit) {
+  @while ($i <= $limit) {
     .#{$class-name}-#{$i} {
       z-index: $i;
     }
@@ -37,12 +41,14 @@ $sides: (
     $i: _process-counter($i, $step-threshold-map);
   }
 }
-/* stylelint-enable */
 
-@mixin borders($class-name, $config) {
-  $thickness: if(map_get($config, thickness) != null, map_get($config, border-thickness), 1px);
+
+@mixin borders($config) {
+  $class-name: map_get($config, class-name);
+  $thickness: if(map_get($config, thickness) != null, map_get($config, thickness), 1px);
   $color: map_get($config, color);
   $radius: map_get($config, radius);
+  $border: #{$thickness} solid #{$color};
 
   .#{$class-name}-none {
     border: 0;
@@ -57,17 +63,15 @@ $sides: (
   }
 
   @each $key, $value in $sides {
-    /* stylelint-disable */
     @if ($key != empty) {
       .#{$class-name}-#{$key} {
-        border-#{$value}: $thickness solid $color;
+        border-#{$value}: $border;
       }
     } @else {
       .#{$class-name} {
-        border: $thickness solid $color;
+        border: $border;
       }
     }
-    /* stylelint-enable */
   }
 }
 
@@ -80,12 +84,11 @@ $sides: (
   @each $key, $value in $sides {
     $i: 1;
 
-    @while ($i < $limit) {
+    @while ($i <= $limit) {
       $class-name: '';
       $prop-name: '';
       $prop-value: '';
 
-      /* stylelint-disable */
       @if ($key != empty) {
         $class-name: #{$mixin-class-name}-#{$key}-#{$i};
         $prop-name: #{$mixin-property-name}-#{$value};
@@ -123,15 +126,23 @@ $sides: (
   .#{$mixin-class-name}-none {
     #{$mixin-property-name}: 0 !important;
   }
-  /* stylelint-enable */
 }
 
 @mixin bootstrap($config) {
   $z-index-config: map_get($config, z-index);
   $borders-config: map_get($config, border);
+  $indents-config: map_get($config, indents);
 
   @include z-index($z-index-config);
   @include borders($borders-config);
-  @include indents(p, padding);
-  @include indents(m, margin);
+
+  @each $class-name, $property-name in map_get($indents-config, config) {
+    @include indents((
+      class-name: $class-name,
+      property-name: $property-name,
+      limit: map_get($indents-config, limit),
+      step-threshold-map: map_get($indents-config, step-threshold-map)
+    ));
+  }
 }
+/* stylelint-enable */
