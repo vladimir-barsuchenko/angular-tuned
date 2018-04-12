@@ -45,7 +45,7 @@ $sides: (
 
 @mixin borders($config) {
   $class-name: map_get($config, class-name);
-  $thickness: if(map_get($config, thickness) != null, map_get($config, thickness), 1px);
+  $thickness: map_get($config, thickness) or 1px;
   $color: map_get($config, color);
   $radius: map_get($config, radius);
   $border: #{$thickness} solid #{$color};
@@ -128,13 +128,101 @@ $sides: (
   }
 }
 
+@mixin basic($config) {
+  $background-class-name: map_get($config, background) or 'bg';
+  $position-class-name: map_get($config, position) or 'pos';
+  $text-class-name: map_get($config, text) or 'text';
+  $font-class-name: map_get($config, font) or 'font';
+  $line-height-class-name: map_get($config, line-height) or 'l-h';
+  $overflow-class-name: map_get($config, overflow) or 'overflow';
+
+  // backgrounds
+  .#{$background-class-name}-white { background-color: white; }
+  .#{$background-class-name}-transparent { background-color: transparent; }
+
+  // positions
+  .#{$position-class-name}-rlt { position: relative; }
+  .#{$position-class-name}-stc { position: static; }
+  .#{$position-class-name}-fix { position: fixed; }
+  .#{$position-class-name}-abs { position: absolute; }
+  .#{$position-class-name}-abs-full {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  // visibility
+  .visibility-visible { visibility: visible; }
+  .visibility-hidden { visibility: hidden; }
+
+  // opacity
+  .opacity-1 { opacity: 1; }
+  .opacity-0 { opacity: 0; }
+
+  // display
+  .display-none { display: none; }
+  .display-block { display: block; }
+  .display-flex { display: flex; }
+
+  // text
+  .#{$text-class-name}-medium { font-size: medium; }
+  .#{$text-class-name}-u-c { text-transform: uppercase; }
+  .#{$text-class-name}-l-t { text-decoration: line-through; }
+  .#{$text-class-name}-u-l { text-decoration: underline; }
+  .#{$text-class-name}-ellipsis {
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  // fonts
+  .#{$font-class-name}-thin { font-weight: 300; }
+  .#{$font-class-name}-normal { font-weight: 400; }
+  .#{$font-class-name}-medium { font-weight: 500; }
+  .#{$font-class-name}-bold { font-weight: 700; }
+  .letter-spacing-default { letter-spacing: normal; }
+
+  // transformations
+  .h-full { height: 100%; }
+  .w-full { width: 100%; }
+
+  // user-actions / ui
+  .select-none { user-select: none; }
+  .select-initial { user-select: initial; }
+  .cursor-pointer { cursor: pointer }
+  .shadow-none { box-shadow: none; }
+  .outline-none { outline: none; }
+  .clear { clear: both; }
+
+  // line-height
+  .#{$line-height-class-name}-none { line-height: 0; }
+  .#{$line-height-class-name}-normal { line-height: normal; }
+  .#{$line-height-class-name}-1x { line-height: 1.2; }
+  .#{$line-height-class-name}-2x { line-height: 2em; }
+
+  // scrolls
+  .scroll-x { overflow-x: auto; }
+  .scroll-y { overflow-y: auto; }
+
+  // overflow
+  .#{$overflow-class-name}-visible { overflow: visible; }
+  .#{$overflow-class-name}-x-hidden { overflow-x: hidden; }
+  .#{$overflow-class-name}-y-hidden { overflow-y: hidden; }
+  .#{$overflow-class-name}-hidden { overflow: hidden; }
+}
+
 @mixin bootstrap($config) {
   $z-index-config: map_get($config, z-index);
   $borders-config: map_get($config, border);
   $indents-config: map_get($config, indents);
+  $basics-config: map_get($config, basics);
 
   @include z-index($z-index-config);
   @include borders($borders-config);
+  @include basic($basics-config);
 
   @each $class-name, $property-name in map_get($indents-config, config) {
     @include indents((
