@@ -18,7 +18,8 @@
 - ~~Lint-staged. Husky~~
 - ~~Commit lint / Commitizen~~
 - ~~Travis CI, Circle CI, GreenKeeper~~
-- Bootstrap  styles
+- ~~Bootstrap  styles~~
+- ~~NgRx, store, effects~~
 - CDN. KeyCDN
 - Angular CDK
   - A11y
@@ -36,7 +37,6 @@
   - router-store
   - store-devtools
   - entity, schematics, notify, db
-- Dynamic components (CDK portals)
 - Angular animations
 - Port to mobile / desktop
 - Angular material (configurable styles)
