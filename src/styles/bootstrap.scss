@@ -148,9 +148,9 @@ $sides: (
   .#{$position-class-name}-abs-full {
     position: absolute;
     top: 0;
-    left: 0;
     right: 0;
     bottom: 0;
+    left: 0;
   }
 
   // visibility
@@ -158,8 +158,8 @@ $sides: (
   .visibility-hidden { visibility: hidden; }
 
   // opacity
-  .opacity-1 { opacity: 1; }
   .opacity-0 { opacity: 0; }
+  .opacity-1 { opacity: 1; }
 
   // display
   .display-none { display: none; }
