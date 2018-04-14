@@ -1,0 +1,49 @@
+$class-names: (
+  z-index: 'z-index',
+  text: 'text',
+  opacity: 'opacity',
+  border: 'b',
+  padding: 'p',
+  margin: 'm',
+  background: 'bg',
+  position: 'pos',
+  text: 'text',
+  font: 'font',
+  line-height: 'l-h',
+  overflow: 'overflow'
+);
+
+$bootstrap-config: (
+  z-index: (
+    class-name: map_get($class-names, z-index),
+    limit: 25,
+    step-threshold-map: (
+      1: 5,
+      5: 25
+    )
+  ),
+  border: (
+    class-name: map_get($class-names, border),
+    radius: 4px,
+    thickness: 1px,
+    color: 'grey',
+  ),
+  indents: (
+    config: (
+      #{map_get($class-names, padding)}: 'padding',
+      #{map_get($class-names, margin)}: 'margin'
+    ),
+    limit: 72,
+    step-threshold-map: (
+      1: 4,
+      2: 16,
+      4: 72
+    )
+  ),
+  basics: $class-names
+);
+
+$material-config: (
+  suffix: 'white-',
+  class-names: $class-names
+);
