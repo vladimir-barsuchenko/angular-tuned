@@ -1,39 +1,6 @@
 @import 'styles/bootstrap';
-@import 'styles/main';
+@import 'styles/config';
+@import 'app/modules/material/styles/index';
 
-@include bootstrap((
-  z-index: (
-    class-name: 'z-index',
-    limit: 25,
-    step-threshold-map: (
-      1: 5,
-      5: 25
-    )
-  ),
-  border: (
-    class-name: 'b',
-    radius: 4px,
-    thickness: 1px,
-    color: 'grey',
-  ),
-  indents: (
-    config: (
-      p: 'padding',
-      m: 'margin'
-    ),
-    limit: 72,
-    step-threshold-map: (
-      1: 4,
-      2: 16,
-      4: 72
-    )
-  ),
-  basics: (
-    background: 'bg',
-    position: 'pos',
-    text: 'text',
-    font: 'font',
-    line-height: 'l-h',
-    overflow: 'overflow'
-  )
-));
+@include angular-material($material-config);
+@include bootstrap($bootstrap-config);

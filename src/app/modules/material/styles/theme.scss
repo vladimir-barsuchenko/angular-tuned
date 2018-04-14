@@ -1,8 +1,8 @@
-@import '~@angular/material/theming';
-@import '../material/colors';
+@import '../../../../../node_modules/@angular/material/theming';
+@import 'colors';
 
 // Background palette for light themes.
-$mat-light-theme-background: (
+$app-light-theme-background: (
   status-bar:               map_get($mat-grey, 300),
   app-bar:                  map_get($mat-grey, 100),
   background:               map_get($mat-grey, 50),
@@ -20,7 +20,7 @@ $mat-light-theme-background: (
 );
 
 // Foreground palette for light themes.
-$mat-light-theme-foreground: (
+$app-light-theme-foreground: (
   base:              black,
   divider:           $black-12-opacity,
   dividers:          $black-12-opacity,
@@ -38,7 +38,7 @@ $mat-light-theme-foreground: (
 );
 
 // Background palette for dark themes.
-$mat-dark-theme-background: (
+$app-dark-theme-background: (
   status-bar:               black,
   app-bar:                  map_get($mat-grey, 900),
   background:               #303030,
@@ -56,7 +56,7 @@ $mat-dark-theme-background: (
 );
 
 // Foreground palette for dark themes.
-$mat-dark-theme-foreground: (
+$app-dark-theme-foreground: (
   base:              white,
   divider:           $white-12-opacity,
   dividers:          $white-12-opacity,
@@ -74,26 +74,26 @@ $mat-dark-theme-foreground: (
 );
 
 // Creates a container object for a light theme to be given to individual component theme mixins.
-@function mat-light-theme($primary, $accent, $warn: mat-palette($mat-red)) {
+@function app-light-theme($primary, $accent, $warn: mat-palette($mat-red)) {
   @return (
     primary: $primary,
     accent: $accent,
     warn: $warn,
     is-dark: false,
-    foreground: $mat-light-theme-foreground,
-    background: $mat-light-theme-background,
+    foreground: $app-light-theme-foreground,
+    background: $app-light-theme-background,
   );
 }
 
 // Creates a container object for a light theme to be given to individual component theme mixins.
-@function mat-dark-theme($primary, $accent, $warn: mat-palette($mat-red)) {
+@function app-dark-theme($primary, $accent, $warn: mat-palette($mat-red)) {
   @return (
     primary: $primary,
     accent: $accent,
     warn: $warn,
     is-dark: false,
-    foreground: $mat-dark-theme-foreground,
-    background: $mat-dark-theme-background,
+    foreground: $app-dark-theme-foreground,
+    background: $app-dark-theme-background,
   );
 }
 
@@ -107,8 +107,10 @@ $foreground-shorten-names-map: (
 
 @mixin foreground-theme($config) {
   $suffix: map_get($config, suffix) or '';
-  $text-class-name: map_get($config, text-class-name);
+  $class-names: map_get($config, class-names);
   $theme: map_get($config, theme);
+
+  $text-class-name: map_get($class-names, text);
 
   @each $shorten-prop-name, $prop-name in $foreground-shorten-names-map {
     .#{$text-class-name}-#{$suffix}#{$shorten-prop-name} {
@@ -119,9 +121,11 @@ $foreground-shorten-names-map: (
 
 @mixin opacity-theme($config) {
   $suffix: map_get($config, suffix) or '';
-  $text-class-name: map_get($config, text-class-name);
-  $opacity-class-name: map_get($config, opacity-class-name);
+  $class-names: map_get($config, class-names);
   $theme: map_get($config, theme);
+
+  $text-class-name: map_get($class-names, text);
+  $opacity-class-name: map_get($class-names, opacity);
 
   @each $shorten-prop-name, $prop-name in $foreground-shorten-names-map {
     @if ($suffix != null) {
@@ -133,8 +137,10 @@ $foreground-shorten-names-map: (
 }
 
 @mixin background-theme($config) {
+  $class-names: map_get($config, class-names);
   $theme: map_get($config, theme);
-  $background-class-name: map_get($config, background-class-name);
+
+  $background-class-name: map_get($class-names, background);
 
   @each $color-name, $color in $theme {
     .#{$background-class-name}-#{$color-name} {
@@ -143,10 +149,10 @@ $foreground-shorten-names-map: (
   }
 }
 
-@mixin init-theme($config) {
-  @include background-theme(map_merge($config, ( theme: $mat-light-theme-background )));
-  @include foreground-theme(map_merge($config, ( theme: $mat-light-theme-foreground )));
-  @include foreground-theme(map_merge($config, ( theme: $mat-dark-theme-foreground )));
-  @include opacity-theme(map_merge($config, ( theme: $mat-light-theme-foreground )));
-  @include opacity-theme(map_merge($config, ( theme: $mat-dark-theme-foreground )));
+@mixin app-material-theme($config) {
+  @include background-theme(map_merge($config, ( theme: $app-light-theme-background)));
+  @include foreground-theme(map_merge($config, ( theme: $app-light-theme-foreground)));
+  @include foreground-theme(map_merge($config, ( theme: $app-dark-theme-foreground)));
+  @include opacity-theme(map_merge($config, ( theme: $app-light-theme-foreground)));
+  @include opacity-theme(map_merge($config, ( theme: $app-dark-theme-foreground)));
 }
