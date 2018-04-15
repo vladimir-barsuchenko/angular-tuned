@@ -20,26 +20,13 @@
 - ~~Travis CI, Circle CI, GreenKeeper~~
 - ~~Bootstrap  styles~~
 - ~~NgRx, store, effects~~
+- ~~Angular Material. Configurable styles~~
+- ~~Angular CDK~~
+- Immutable.js
 - CDN. KeyCDN
-- Angular CDK
-  - A11y
-  - Bidirectionality
-  - Layout
-  - Observers
-  - Overlay
-  - ~~Portal~~
-  - Scrolling
 - i18n
-- Redux store (NgRx) (example app: https://github.com/ngrx/platform/tree/master/example-app)
-  - Try to tune subscriptions when OnPush strategy is used
-  - store
-  - effects
-  - router-store
-  - store-devtools
-  - entity, schematics, notify, db
 - Angular animations
 - Port to mobile / desktop
-- Angular material (configurable styles)
 - Webworker
 - Angular Elements
 - RxJS 6
