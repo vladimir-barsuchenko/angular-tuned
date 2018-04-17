@@ -88,7 +88,7 @@
     "stylelint-order": "^0.8.1",
     "stylelint-scss": "^3.0.0",
     "ts-loader": "^2.3.7",
-    "ts-node": "~4.1.0",
+    "ts-node": "~6.0.0",
     "tslint": "~5.9.1",
     "tslint-config-airbnb": "^5.7.0",
     "typescript": "^2.5.3"
