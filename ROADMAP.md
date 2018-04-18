@@ -22,7 +22,7 @@
 - ~~NgRx, store, effects~~
 - ~~Angular Material. Configurable styles~~
 - ~~Angular CDK~~
-- Immutable.js
+- ~~Immutable.js~~
 - CDN. KeyCDN
 - i18n
 - Angular animations
