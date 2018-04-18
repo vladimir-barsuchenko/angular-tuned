@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 
 import { SandboxComponent } from './sandbox.component';
 import { SandboxRoutingModule } from './sandbox-routing.module';
-import { ImmutableComponent } from './immutable/immutable.component';
 
 
 @NgModule({
@@ -11,6 +10,6 @@ import { ImmutableComponent } from './immutable/immutable.component';
     CommonModule,
     SandboxRoutingModule,
   ],
-  declarations: [SandboxComponent, ImmutableComponent],
+  declarations: [SandboxComponent],
 })
 export class SandboxModule {}
