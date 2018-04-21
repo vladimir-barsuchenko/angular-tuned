@@ -1,2 +1,3 @@
-i18n
-ng-conf
+- i18n
+
+- ng-conf
