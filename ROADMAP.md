@@ -24,7 +24,7 @@
 - ~~Angular CDK~~
 - ~~Immutable.js~~
 - CDN. KeyCDN
-- i18n
+- ~~i18n~~
 - Angular animations
 - Port to mobile / desktop
 - Webworker
