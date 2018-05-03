@@ -45,7 +45,7 @@
     "@ngrx/router-store": "^5.2.0",
     "@ngrx/store": "^5.2.0",
     "@ngrx/store-devtools": "^5.2.0",
-    "@nguniversal/common": "^5.0.0-beta.6",
+    "@nguniversal/common": "^6.0.0",
     "@nguniversal/express-engine": "^5.0.0-beta.6",
     "@nguniversal/module-map-ngfactory-loader": "^5.0.0-beta.6",
     "angularfire2": "^5.0.0-rc.6",
