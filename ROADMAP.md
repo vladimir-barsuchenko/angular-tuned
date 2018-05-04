@@ -23,8 +23,9 @@
 - ~~Angular Material. Configurable styles~~
 - ~~Angular CDK~~
 - ~~Immutable.js~~
-- CDN. KeyCDN
+- ~~CSS API Houdini~~
 - ~~i18n~~
+- CDN. KeyCDN
 - Angular animations
 - Port to mobile / desktop
 - Webworker
@@ -48,4 +49,4 @@
 - Firebase. Angular Fire
 - Google Analytics
 - Web Assembly
-- CSS API Houdini
+
