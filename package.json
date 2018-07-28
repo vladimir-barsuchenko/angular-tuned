@@ -7,7 +7,7 @@
     "start": "ng serve",
     "hmr": "ng serve --hmr -e=hmr",
     "build": "ng build --prod",
-    "test": "ng test",
+    "test": "ng test --watch=false",
     "test:watch": "ng test",
     "lint": "./node_modules/.bin/stylelint src/**/*.scss && ng lint",
     "fix": "./node_modules/.bin/stylelint src/**/*.scss --fix && ng lint --fix",
