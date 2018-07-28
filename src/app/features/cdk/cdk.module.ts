@@ -7,7 +7,6 @@ import { CdkRoutingModule } from './cdk-routing.module';
 import { PortalComponent } from './components/portal/portal.component';
 import { DynamicComponent } from './components/portal/dynamic.component';
 
-
 @NgModule({
   imports: [
     CommonModule,

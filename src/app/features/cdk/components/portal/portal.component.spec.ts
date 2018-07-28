@@ -3,7 +3,6 @@ import { PortalModule } from '@angular/cdk/portal';
 
 import { PortalComponent } from './portal.component';
 
-
 describe('PortalComponent', () => {
   let component: PortalComponent;
   let fixture: ComponentFixture<PortalComponent>;

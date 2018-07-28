@@ -7,7 +7,6 @@ import { AppModule } from './app.module';
 import { AppComponent } from './app.component';
 import { AppShellComponent } from './components/app-shell/app-shell.component';
 
-
 const routes: Routes = [{ path: 'app-shell-path', component: AppShellComponent }];
 
 @NgModule({

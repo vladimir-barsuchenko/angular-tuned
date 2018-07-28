@@ -3,7 +3,6 @@ import { RouterTestingModule } from '@angular/router/testing';
 
 import { CdkComponent } from './cdk.component';
 
-
 describe('CdkComponent', () => {
   let component: CdkComponent;
   let fixture: ComponentFixture<CdkComponent>;

@@ -1,6 +1,5 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 
-
 @Component({
   selector: 'app-shell',
   templateUrl: './app-shell.component.html',

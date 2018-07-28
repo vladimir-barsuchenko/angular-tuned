@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { MatButtonModule, MatIconModule, MatRippleModule } from '@angular/material';
 
-
 @NgModule({
   imports: [
     MatButtonModule,

@@ -6,7 +6,6 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 
 import { environment } from '../../environments/environment';
 
-
 @NgModule({
   imports: [
     StoreModule.forRoot({}),
@@ -18,4 +17,3 @@ import { environment } from '../../environments/environment';
 export class NgrxModule {
   constructor() {}
 }
-

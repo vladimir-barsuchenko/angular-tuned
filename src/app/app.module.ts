@@ -7,7 +7,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { ServiceWorkerConfigModule } from './modules/service-worker-config.module';
 import { NgrxModule } from './modules/ngrx.module';
 
-
 @NgModule({
   imports: [
     BrowserModule.withServerTransition({ appId: 'angular-tuned' }),

@@ -4,7 +4,6 @@ import { CommonModule } from '@angular/common';
 import { SandboxComponent } from './sandbox.component';
 import { SandboxRoutingModule } from './sandbox-routing.module';
 
-
 @NgModule({
   imports: [
     CommonModule,

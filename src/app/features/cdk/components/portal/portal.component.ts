@@ -8,7 +8,6 @@ import {
 import { CdkPortal, ComponentPortal, Portal } from '@angular/cdk/portal';
 import { DynamicComponent } from './dynamic.component';
 
-
 @Component({
   selector: 'app-portal',
   templateUrl: './portal.component.html',

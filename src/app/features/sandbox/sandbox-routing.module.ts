@@ -3,7 +3,6 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { SandboxComponent } from './sandbox.component';
 
-
 export const routes: Routes = [
   {
     path: '',
