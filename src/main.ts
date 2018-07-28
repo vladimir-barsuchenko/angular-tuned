@@ -5,7 +5,6 @@ import { AppModule } from './app/app.module';
 import { environment } from './environments/environment';
 import { hmrBootstrap } from './hmr';
 
-
 function disableConsoleApi() {
   if (typeof console['_commandLineAPI'] !== 'undefined') {
     console['API'] = console['_commandLineAPI'];
@@ -25,7 +24,7 @@ if (environment.production) {
 const bootstrap = () => platformBrowserDynamic().bootstrapModule(AppModule);
 
 if (environment.hmr) {
-  if (module[ 'hot' ]) {
+  if (module['hot']) {
     hmrBootstrap(module, bootstrap);
   } else {
     console.error('HMR is not enabled for webpack-dev-server!');

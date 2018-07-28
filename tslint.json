@@ -1,5 +1,6 @@
 {
   "extends": [
+    "rxjs-tslint-rules",
     "tslint-config-airbnb"
   ],
   "rules": {
@@ -87,6 +88,17 @@
       }
     ],
     "typeof-compare": true,
-    "unified-signatures": true
+    "unified-signatures": true,
+    "rxjs-no-create": { "severity": "error" },
+    "rxjs-finnish": {
+      "options": [{
+        "functions": false,
+        "methods": false,
+        "parameters": false,
+        "properties": false,
+        "variables": true
+      }],
+      "severity": "error"
+    }
   }
 }
