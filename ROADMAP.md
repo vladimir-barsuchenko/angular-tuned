@@ -25,12 +25,13 @@
 - ~~Immutable.js~~
 - ~~CSS API Houdini~~
 - ~~i18n~~
+- ~~rxjs-tslint-rules~~
 - CDN. KeyCDN
 - Angular animations
 - Port to mobile / desktop
 - Webworker
 - Angular Elements
-- RxJS 6
+- ~~RxJS 6~~
 - <link> optimizations
   - dns-prefetch
   - preconnet
@@ -45,7 +46,7 @@
 - image.onload() Rendering images in separate thread
 - RAIL
 - Take care of polyfills
-- zone.js (NgZone)
+- ~~zone.js (NgZone)~~
 - Firebase. Angular Fire
 - Google Analytics
 - Web Assembly
