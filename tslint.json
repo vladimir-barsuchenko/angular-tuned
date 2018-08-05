@@ -90,6 +90,7 @@
     "typeof-compare": true,
     "unified-signatures": true,
     "rxjs-no-create": { "severity": "error" },
+    "rxjs-no-unsafe-takeuntil": { "severity": "error" },
     "rxjs-finnish": {
       "options": [{
         "functions": false,

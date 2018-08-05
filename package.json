@@ -22,8 +22,7 @@
     "serve:ssr": "node dist/server",
     "cz-commit": "git-cz",
     "commitmsg": "commitlint -e $GIT_PARAMS",
-    "precommit": "lint-staged",
-    "tslint": "tslint --project ./tsconfig.json"
+    "precommit": "lint-staged"
   },
   "private": true,
   "dependencies": {
@@ -48,6 +47,7 @@
     "@nguniversal/common": "^6.0.0",
     "@nguniversal/express-engine": "^6.0.0",
     "@nguniversal/module-map-ngfactory-loader": "^6.0.0",
+    "@nrwl/schematics": "^6.1.1",
     "angularfire2": "^5.0.0-rc.11",
     "compression": "^1.7.3",
     "core-js": "^2.5.7",
