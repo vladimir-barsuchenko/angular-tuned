@@ -3,9 +3,12 @@
 // `ng build --env=prod` then `environment.prod.ts` will be used instead.
 // The list of which env maps to which file can be found in `.angular-cli.json`.
 
+import { DeviceTarget } from './device-target.enum';
+
 export const environment = {
   production: false,
   hmr: false,
   debug: true,
   serverPublicKey: '',
+  deviceTarget: DeviceTarget.Browser,
 };

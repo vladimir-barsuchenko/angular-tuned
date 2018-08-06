@@ -4,6 +4,8 @@ import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import { AppModule } from './app/app.module';
 import { environment } from './environments/environment';
 import { hmrBootstrap } from './hmr';
+import { DeviceTarget } from './environments/device-target.enum';
+import { loadExternalScripts } from './util';
 
 function disableConsoleApi() {
   if (typeof console['_commandLineAPI'] !== 'undefined') {
@@ -19,17 +21,32 @@ function disableConsoleApi() {
 
 if (environment.production) {
   enableProdMode();
+  disableConsoleApi();
 }
 
-const bootstrap = () => platformBrowserDynamic().bootstrapModule(AppModule);
+const bootstrapModule = () => platformBrowserDynamic().bootstrapModule(AppModule);
 
-if (environment.hmr) {
-  if (module['hot']) {
-    hmrBootstrap(module, bootstrap);
+const init = () => {
+  if (environment.hmr) {
+    if (module['hot']) {
+      hmrBootstrap(module, bootstrapModule);
+    } else {
+      console.error('HMR is not enabled for webpack-dev-server!');
+      console.log('Are you using the --hmr flag for ng serve?');
+    }
   } else {
-    console.error('HMR is not enabled for webpack-dev-server!');
-    console.log('Are you using the --hmr flag for ng serve?');
+    bootstrapModule();
   }
-} else {
-  bootstrap();
+};
+
+switch (environment.deviceTarget) {
+  case DeviceTarget.Mobile: {
+    document.addEventListener('deviceready', init, false);
+    loadExternalScripts('cordova.js');
+    break;
+  }
+  default: {
+    init();
+    break;
+  }
 }
