@@ -28,7 +28,7 @@
 - ~~rxjs-tslint-rules~~
 - CDN. KeyCDN
 - Angular animations
-- Port to mobile / desktop
+- Port to ~~mobile~~ / desktop
 - Webworker
 - Angular Elements
 - ~~RxJS 6~~
