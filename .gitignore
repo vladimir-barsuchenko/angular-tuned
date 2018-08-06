@@ -8,6 +8,7 @@
 
 # dependencies
 /node_modules
+/AngularTunedCordova/node_modules
 
 /functions/dist-server
 /functions/node_modules

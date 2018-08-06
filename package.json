@@ -13,6 +13,7 @@
     "fix": "./node_modules/.bin/stylelint src/**/*.scss --fix && ng lint --fix",
     "e2e": "ng e2e",
     "build:client-and-server-bundles": "ng run angular-tuned:build-with-app-shell",
+    "cordova:build:prod": "ng run cordova:build:production",
     "build:prerender": "npm run build:client-and-server-bundles && npm run webpack:server && npm run generate:prerender",
     "build:ssr": "npm run build:client-and-server-bundles && npm run webpack:server",
     "build:fire-ssr": "ng run firebase:build-with-app-shell",
