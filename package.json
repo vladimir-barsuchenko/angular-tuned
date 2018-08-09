@@ -31,9 +31,7 @@
     "electron:serve": "wait-on http-get://localhost:4200/ && npm run electron:tsc && electron electron-main.js --serve",
     "electron:local": "npm run electron:build:prod && electron electron-main.js",
     "electron:linux": "npm run electron:build:prod && npx electron-builder build --linux",
-    "electron:windows": "npm run electron:build:prod && npx electron-builder build  --windows"
-
-  ,
+    "electron:windows": "npm run electron:build:prod && npx electron-builder build  --windows",
     "electron:mac": "npm run electron:build:prod && npx electron-builder build --mac"
   },
   "private": true,
@@ -59,7 +57,7 @@
     "@nguniversal/common": "^6.0.0",
     "@nguniversal/express-engine": "^6.0.0",
     "@nguniversal/module-map-ngfactory-loader": "^6.0.0",
-    "@nrwl/schematics": "^6.1.1",
+    "@nrwl/schematics": "^6.2.0",
     "angularfire2": "^5.0.0-rc.11",
     "compression": "^1.7.3",
     "core-js": "^2.5.7",

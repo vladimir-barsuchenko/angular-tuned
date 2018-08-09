@@ -1,4 +1,5 @@
 import 'zone.js/dist/zone-node';
+// @ts-ignore
 import * as functions from 'firebase-functions';
 import 'reflect-metadata';
 import { enableProdMode } from '@angular/core';
