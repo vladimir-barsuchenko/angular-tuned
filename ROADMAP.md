@@ -7,9 +7,9 @@
 - PRPL (PWA)
    - ~~Service Worker~~
    - ~~HTTP/2 server push (Firebase)~~
-   ~~Deployed to firebase but config should be automated. (ngu-firebase-push doesn't work for 
+   ~~Deployed to firebase but config should be automated.~~ (ngu-firebase-push doesn't work for 
    Angular
-    5+)~~
+    5+)
    - ~~app shell~~
    - ~~Push notifications~~
    - ~~Dynamically cache content~~
@@ -40,7 +40,7 @@
 - Tests coverage
 - Progressive image loading
 - Defer rendering on mounting / un-mounting components
-- ~~Docker~~
+- ~~Docker. Docker-compose. Nginx~~
 - image.onload() Rendering images in separate thread
 - RAIL
 - Take care of polyfills
