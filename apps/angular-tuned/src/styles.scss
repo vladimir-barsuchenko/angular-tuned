@@ -1,0 +1,6 @@
+@import 'styles/bootstrap';
+@import 'styles/config';
+@import '~@levgaas/material-theming/src/index.scss';
+
+@include angular-material($material-config);
+@include bootstrap($bootstrap-config);

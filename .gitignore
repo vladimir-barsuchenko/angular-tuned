@@ -2,16 +2,11 @@
 
 # compiled output
 /dist
-/dist-server
 /tmp
 /out-tsc
 
 # dependencies
 /node_modules
-
-/functions/dist-server
-/functions/node_modules
-/functions/browser
 
 # IDEs and editors
 /.idea
@@ -39,15 +34,11 @@ yarn-error.log
 testem.log
 /typings
 
-# e2e
-/e2e/*.js
-/e2e/*.map
-
 # System Files
 .DS_Store
 Thumbs.db
 
-/.firebaserc
-/src/app/modules/src
-/functions/lib/
-
+# Functions
+/apps/angular-tuned/dist-server
+/apps/angular-tuned/browser
+/apps/angular-tuned/node_modules

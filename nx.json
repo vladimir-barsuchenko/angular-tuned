@@ -1,0 +1,24 @@
+{
+  "npmScope": "levgaas",
+  "implicitDependencies": {
+    "angular.json": "*",
+    "package.json": "*",
+    "tsconfig.json": "*",
+    "tslint.json": "*",
+    "nx.json": "*"
+  },
+  "projects": {
+    "angular-tuned": {
+      "tags": []
+    },
+    "angular-tuned-e2e": {
+      "tags": []
+    },
+    "material-theming": {
+      "tags": []
+    },
+    "elements": {
+      "tags": []
+    }
+  }
+}

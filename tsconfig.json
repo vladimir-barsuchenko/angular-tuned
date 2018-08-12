@@ -1,7 +1,6 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
-    "outDir": "./dist/out-tsc",
     "sourceMap": true,
     "declaration": false,
     "moduleResolution": "node",
@@ -14,9 +13,19 @@
     "lib": [
       "es2017",
       "dom"
-    ]
+    ],
+    "baseUrl": ".",
+    "paths": {
+      "@levgaas/material-theming": [
+        "libs/material-theming/src/index.ts"
+      ],
+      "@levgaas/elements": [
+        "libs/elements/src/index.ts"
+      ]
+    }
   },
   "exclude": [
-    "functions"
+    "node_modules",
+    "tmp"
   ]
 }

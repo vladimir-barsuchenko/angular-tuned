@@ -3,41 +3,34 @@
     "rxjs-tslint-rules",
     "tslint-config-airbnb"
   ],
+  "rulesDirectory": [
+    "node_modules/codelyzer",
+    "node_modules/@nrwl/schematics/src/tslint"
+  ],
   "rules": {
     "arrow-return-shorthand": true,
     "callable-types": true,
     "class-name": true,
-    "function-name": [
-      true,
-      {
-        "function-regex": "^[a-zA-Z][\\w\\d]+$"
-      }
-    ],
-    "variable-name": [
-      true,
-      {
-        "variable-regex": "^[a-zA-Z][\\w\\d]+$"
-      }
-    ],
-    "whitespace": [
-      true,
-      "check-branch",
-      "check-decl",
-      "check-operator",
-      "check-separator",
-      "check-type",
-      "check-preblock"
-    ],
-    "import-spacing": true,
-    "curly": true,
+    "deprecation": {
+      "severity": "warn"
+    },
     "forin": true,
+    "import-blacklist": [
+      true,
+      "rxjs/Rx"
+    ],
     "interface-over-type-literal": true,
-    "label-position": true,
     "member-access": false,
     "member-ordering": [
       true,
-      "static-before-instance",
-      "variables-before-functions"
+      {
+        "order": [
+          "static-field",
+          "instance-field",
+          "static-method",
+          "instance-method"
+        ]
+      }
     ],
     "no-arg": true,
     "no-bitwise": true,
@@ -49,6 +42,7 @@
       "timeEnd",
       "trace"
     ],
+    "no-construct": true,
     "no-debugger": true,
     "no-duplicate-super": true,
     "no-empty": false,
@@ -64,12 +58,69 @@
     "no-string-literal": false,
     "no-string-throw": true,
     "no-switch-case-fall-through": true,
-    "no-trailing-whitespace": true,
     "no-unnecessary-initializer": true,
     "no-unused-expression": true,
     "no-use-before-declare": true,
     "no-var-keyword": true,
     "object-literal-sort-keys": false,
+    "prefer-const": true,
+    "radix": true,
+    "triple-equals": [
+      true,
+      "allow-null-check"
+    ],
+    "unified-signatures": true,
+    "variable-name": false,
+    "directive-selector": [
+      true,
+      "attribute",
+      "app",
+      "camelCase"
+    ],
+    "component-selector": [
+      true,
+      "element",
+      "app",
+      "kebab-case"
+    ],
+    "no-output-on-prefix": true,
+    "use-input-property-decorator": true,
+    "use-output-property-decorator": true,
+    "use-host-property-decorator": true,
+    "no-input-rename": true,
+    "no-output-rename": true,
+    "use-life-cycle-interface": true,
+    "use-pipe-transform-interface": true,
+    "component-class-suffix": true,
+    "directive-class-suffix": true,
+
+    "nx-enforce-module-boundaries": [
+      true,
+      {
+        "allow": [],
+        "depConstraints": [
+          { "sourceTag": "*", "onlyDependOnLibsWithTags": ["*"] }
+        ]
+      }
+    ],
+    "function-name": [
+      true,
+      {
+        "function-regex": "^[a-zA-Z][\\w\\d]+$"
+      }
+    ],
+    "whitespace": [
+      true,
+      "check-branch",
+      "check-decl",
+      "check-operator",
+      "check-separator",
+      "check-type",
+      "check-preblock"
+    ],
+    "import-spacing": true,
+    "curly": true,
+    "label-position": true,
     "one-line": [
       true,
       "check-open-brace",
@@ -88,7 +139,6 @@
       }
     ],
     "typeof-compare": true,
-    "unified-signatures": true,
     "rxjs-no-create": { "severity": "error" },
     "rxjs-no-unsafe-takeuntil": { "severity": "error" },
     "rxjs-finnish": {

@@ -1,0 +1,13 @@
+{
+  "name": "elements",
+  "version": "0.0.1",
+  "scripts": {
+    "build-web-components": "ng run elements:build-web-components:production",
+    "package-web-components": "cat dist/libs/elements/elements/{runtime,polyfills,scripts,main}.js| gzip > elements.js",
+    "build-and-package": "npm run build-web-components && npm run package-web-components"
+  },
+  "peerDependencies": {
+    "@angular/common": "^6.0.0-rc.0 || ^6.0.0",
+    "@angular/core": "^6.0.0-rc.0 || ^6.0.0"
+  }
+}

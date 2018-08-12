@@ -1,6 +1,0 @@
-@import 'styles/bootstrap';
-@import 'styles/config';
-@import 'app/modules/material/styles/index';
-
-@include angular-material($material-config);
-@include bootstrap($bootstrap-config);
