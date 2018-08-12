@@ -10,7 +10,10 @@
   },
   "exclude": [
     "test.ts",
-    "**/*.spec.ts"
+    "**/*.spec.ts",
+    "electron-main.ts",
+    "server.ts",
+    "prerender.ts"
   ],
   // Add "angularCompilerOptions" with the AppServerModule you wrote
   // set as the "entryModule".

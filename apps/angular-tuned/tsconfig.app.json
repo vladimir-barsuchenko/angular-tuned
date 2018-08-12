@@ -8,7 +8,10 @@
     "src/test.ts",
     "**/*.spec.ts",
     "karma.conf.ts",
-    "functions"
+    "functions",
+    "electron-main.ts",
+    "server.ts",
+    "prerender.ts"
   ],
   "include": [
     "**/*.ts"

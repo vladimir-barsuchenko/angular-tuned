@@ -14,5 +14,10 @@
   "include": [
     "**/*.spec.ts",
     "**/*.d.ts"
+  ],
+  "exclude": [
+    "electron-main.ts",
+    "server.ts",
+    "prerender.ts"
   ]
 }
