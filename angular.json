@@ -91,7 +91,8 @@
               "apps/angular-tuned/src/assets",
               "apps/angular-tuned/src/manifest.json",
               "apps/angular-tuned/src/amp.html"
-            ]
+            ],
+            "codeCoverage": true
           }
         },
         "lint": {
@@ -286,7 +287,8 @@
           "options": {
             "main": "libs/material-theming/src/test.ts",
             "tsConfig": "libs/material-theming/tsconfig.spec.json",
-            "karmaConfig": "libs/material-theming/karma.conf.js"
+            "karmaConfig": "libs/material-theming/karma.conf.js",
+            "codeCoverage": true
           }
         },
         "lint": {
@@ -326,7 +328,8 @@
           "options": {
             "main": "libs/elements/src/test.ts",
             "tsConfig": "libs/elements/tsconfig.spec.json",
-            "karmaConfig": "libs/elements/karma.conf.js"
+            "karmaConfig": "libs/elements/karma.conf.js",
+            "codeCoverage": true
           }
         },
         "lint": {
