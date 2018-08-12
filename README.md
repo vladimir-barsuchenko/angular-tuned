@@ -2,6 +2,8 @@
 
 [![Greenkeeper badge](https://badges.greenkeeper.io/levgaas/angular-tuned.svg)](https://greenkeeper.io/)
 
+[![Build Status](https://travis-ci.org/levgaas/angular-tuned.png?branch=master)](https://travis-ci.org/levgaas/angular-tuned)
+
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) using [Nrwl Nx](https://nrwl.io/nx).
 
