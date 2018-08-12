@@ -39,6 +39,11 @@ testem.log
 Thumbs.db
 
 # Functions
-/apps/angular-tuned/dist-server
-/apps/angular-tuned/browser
+/apps/angular-tuned/functions/dist-server
+/apps/angular-tuned/functions/browser
+/apps/angular-tuned/functions/node_modules
+/apps/angular-tuned/functions/lib
+
+# Angular-tuned
 /apps/angular-tuned/node_modules
+/apps/angular-tuned/electron-main.js
