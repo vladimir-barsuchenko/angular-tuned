@@ -35,4 +35,4 @@ jobs:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
 
-      - run: npm run build:ssr
+      - run: cd apps/angular-tuned && npm run build:ssr
