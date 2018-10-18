@@ -60,7 +60,7 @@
     "@ngrx/router-store": "^6.1.0",
     "@ngrx/store": "^6.1.0",
     "@ngrx/store-devtools": "^6.0.1",
-    "@nguniversal/common": "^6.0.0",
+    "@nguniversal/common": "^7.0.0",
     "@nguniversal/express-engine": "^6.0.0",
     "@nguniversal/module-map-ngfactory-loader": "^6.0.0",
     "@nrwl/nx": "6.2.0",
