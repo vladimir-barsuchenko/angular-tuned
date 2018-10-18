@@ -41,7 +41,7 @@
   "private": true,
   "dependencies": {
     "@angular/animations": "^6.1.0",
-    "@angular/cdk": "^6.4.1",
+    "@angular/cdk": "^7.0.0",
     "@angular/common": "^6.1.0",
     "@angular/compiler": "^6.1.0",
     "@angular/core": "^6.1.0",
@@ -49,7 +49,7 @@
     "@angular/flex-layout": "^6.0.0-beta.17",
     "@angular/forms": "^6.1.0",
     "@angular/http": "^6.1.0",
-    "@angular/material": "^6.4.1",
+    "@angular/material": "^7.0.0",
     "@angular/platform-browser": "^6.1.0",
     "@angular/platform-browser-dynamic": "^6.1.0",
     "@angular/platform-server": "^6.1.0",
