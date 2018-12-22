@@ -109,7 +109,7 @@
     "rxjs-tslint-rules": "^4.7.0",
     "stylelint": "^9.4.0",
     "stylelint-order": "^0.8.1",
-    "stylelint-scss": "^3.2.0",
+    "stylelint-scss": "^3.4.3",
     "ts-loader": "^4.4.2",
     "ts-node": "~5.0.1",
     "tslint": "~5.9.1",
