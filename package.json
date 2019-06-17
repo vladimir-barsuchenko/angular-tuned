@@ -63,7 +63,7 @@
     "@nguniversal/common": "^6.0.0",
     "@nguniversal/express-engine": "^6.0.0",
     "@nguniversal/module-map-ngfactory-loader": "^6.0.0",
-    "@nrwl/nx": "6.2.0",
+    "@nrwl/nx": "7.8.7",
     "@nrwl/schematics": "^6.2.0",
     "angularfire2": "^5.0.0-rc.11",
     "compression": "^1.7.3",
