@@ -88,7 +88,7 @@
     "@commitlint/prompt": "^7.0.0",
     "@types/jasmine": "~2.8.6",
     "@types/jasminewd2": "~2.0.3",
-    "@types/node": "~8.9.4",
+    "@types/node": "~13.1.7",
     "codelyzer": "~4.2.1",
     "commitizen": "^2.10.1",
     "cpy-cli": "^2.0.0",
